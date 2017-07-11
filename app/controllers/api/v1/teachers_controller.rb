@@ -5,7 +5,8 @@ class Api::V1::TeachersController < ApiController
     render :json => {
       :data => @teachers.map{ |teacher|
         {
-          :teacher_name => teacher.name
+          :teacher_name => teacher.name,
+          :courses => teacher.courses
         }
       }
     }
